@@ -11,25 +11,14 @@ targetCompatibility = 11
 
 repositories {
 	mavenCentral()
-//	flatDir {
-//		dirs 'libs'
-//	}
 }
-
-// To use classpath implementation, comment out all 'compile group' and
-// uncomment compile name plus flatDir. but this implementation will throw
-// 'java.lang.NoClassDefFoundError: com/ibm/icu/text/DateFormat' error
 
 dependencies {
 	compile "com.google.guava:guava:27.0-jre"
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	compile group: 'org.graalvm.sdk', name: 'graal-sdk', version: '19.1.1'
-	compile group: 'org.graalvm.truffle', name: 'truffle-api', version: '19.1.1'
-	compile group: 'org.graalvm.js', name: 'js', version: '19.1.1'
-
-//	compile name: 'graal-sdk-19.1.1'
-//	compile name: 'js-19.1.1'
-//	compile name: 'truffle-api-19.1.1'
+	compile group: 'org.graalvm.sdk', name: 'graal-sdk', version: '19.2.0.1'
+	compile group: 'org.graalvm.truffle', name: 'truffle-api', version: '19.2.0.1'
+	compile group: 'org.graalvm.js', name: 'js', version: '19.2.0.1'
 }
